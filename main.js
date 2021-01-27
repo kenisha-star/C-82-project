@@ -1,6 +1,7 @@
 canvas = document.getElementById('myCanvas');
 ctx = canvas.getContext("2d");
 var mouseEvent="empty";
+var last_x,last_y,current_x,current_y;
 canvas.addEventListener("mousedown", mymousedown)
 function mymousedown(e) {
 mouseEvent="mousedown";
