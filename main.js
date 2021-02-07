@@ -1,4 +1,4 @@
-canvas = document.getElementById('myCanvas');
+canvas = document.getElementById("myCanvas");
 ctx = canvas.getContext("2d");
 var mouseEvent="empty";
 var last_x,last_y,current_x,current_y;
@@ -13,7 +13,8 @@ mouseEvent="mouseup";
 } 
 
 canvas.addEventListener("mouseleave", mymouseleave)
-function mymouseleave(e) {
+function mymouseleave(e) 
+{
 mouseEvent="mouseleave";
 }
 
@@ -24,10 +25,9 @@ current_y = e.clientY - canvas.offsetTop;
 if (mouseEvent == "mousedown") 
 {
 ctx.beginPath() ;
-ctx.strokeStyle="red"
-ctx.lineWidth=5;
-ctx.moveTo(last_x,last_y);
-ctx.lineTo(current_x, current_y);
+ctx.strokeStyle="red";
+ctx.lineWidth=1;
+ctx.arc(current_x, current_y, 10,0 , 2 * Math.PI);
 ctx.stroke();
 }
 }
